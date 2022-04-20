@@ -82,7 +82,7 @@ Get-NetForestTrust / Get-NetForestTrust –Forest "forestname" (Map trusts of a 
 
 # User Hunting
 
-/!\ realmy noisy /!\
+/!\ really noisy /!\
 
 Find-LocalAdminAccess –Verbose (Find all machines on the current domain where the current user has local admin access)
 
