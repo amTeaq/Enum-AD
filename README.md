@@ -1,6 +1,6 @@
 # Enum-AD Environnement
 
-# RECON ENV
+# RECON ENV ( Using PowerView Module: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
 # DOMAIN
 
@@ -99,11 +99,9 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 # Priv Esc
 
 PowerUp:
+
 Invoke-AllChecks
 
-
-
-good ressource : https://book.hacktricks.xyz/windows/basic-powershell-for-pentesters/powerview
 
 --------------------------------------------------------------
 
