@@ -88,6 +88,19 @@ Find-LocalAdminAccess –Verbose (Find all machines on the current domain where 
 
 -- more info about this command : query the dc to get list of all the computer of the domain (Get-NetComputer) and then query each machine on the domain with "Invoke-CheckLocalAdminAccess" --
 
+Invoke-UserHunter / Invoke-UserHunter -GroupName "RDPUsers" (Find computers where a domain admin (or specified user/group) has sessions)
+
+Invoke-UserHunter -CheckAccess (To confirm admin access)
+
+Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
+
+//Defense -> .\NetCease.ps1 (change permissions on the netsession enum method by removing permission for authenticated users group. 
+
+# Priv Esc
+
+PowerUp:
+Invoke-AllChecks
+
 
 
 good ressource : https://book.hacktricks.xyz/windows/basic-powershell-for-pentesters/powerview
