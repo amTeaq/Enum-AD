@@ -1,6 +1,8 @@
 # Enum-AD Environnement
 
-# RECON ENV ( Using PowerView Module: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
+# RECON 
+
+with PowerView Module: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
 
 # DOMAIN
 
