@@ -125,7 +125,7 @@ coming ...
 
 − List all the OUs
 
-− List all the computers in the StudentMachines OU.
+− List all the computers in the StudentMachines OU. -> Get-NetOU StudentMachines | %{Get-NetComputer -ADSPath $_}
 
 − List the GPOs
 
