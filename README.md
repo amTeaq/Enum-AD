@@ -113,6 +113,16 @@ coming ...
 
 # Check LIST
 
+− Users
+
+− Computers
+
+− Domain Administrators
+
+− Enterprise Administrators
+
+− Shares
+
 Check SPN -> kerberoasting -> crack offline hash
 
 AS-REPs Roasting -> ASKTGT for the specific user
