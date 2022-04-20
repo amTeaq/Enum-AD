@@ -4,43 +4,43 @@
 
 ## DOMAIN
 
-### Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
+Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
 
-### Get-DomainSID
+Get-DomainSID
 
-### Get-DomainPolicy
+Get-DomainPolicy
 
-### Get-NetDomainController / Get-NetDomainController –Domain "otherdomain"
+Get-NetDomainController / Get-NetDomainController –Domain "otherdomain"
 
-## USER / GROUP
+# USER / GROUP
 
-### Get-NetUser / Get-NetUser –Username student1 (enum user)
+Get-NetUser / Get-NetUser –Username student1 (enum user)
 
-### Get-UserProperty / Get-UserProperty –Properties pwdlastset (enum user properties)
+Get-UserProperty / Get-UserProperty –Properties pwdlastset (enum user properties)
 
-### Get-NetComputer / Get-NetComputer –OperatingSystem "*Server 2016* (Get a list of computers in the current domain)
+Get-NetComputer / Get-NetComputer –OperatingSystem "*Server 2016* (Get a list of computers in the current domain)
 
-### Get-NetGroup / Get-NetGroup –Domain "targetdomain" (enum group) / Get-NetGroup *admin (all grp with admin word)
+Get-NetGroup / Get-NetGroup –Domain "targetdomain" (enum group) / Get-NetGroup *admin (all grp with admin word)
 
-### Get-NetGroupMember -GroupName "Domain Admins" -Recurse (Get all the members of the Domain Admins group)
+Get-NetGroupMember -GroupName "Domain Admins" -Recurse (Get all the members of the Domain Admins group)
 
-### Get-NetGroup –UserName "user" (Get the group membership for a user)
+Get-NetGroup –UserName "user" (Get the group membership for a user)
 
-### Get-NetLocalGroup -ComputerName "computername" -ListGroups (List all the local groups on a machine) need privs
+Get-NetLocalGroup -ComputerName "computername" -ListGroups (List all the local groups on a machine) need privs
 
-### Get-NetLocalGroup -ComputerName "computername" -Recurse (Get members of all the local groups on a machine) need privs
+Get-NetLocalGroup -ComputerName "computername" -Recurse (Get members of all the local groups on a machine) need privs
 
-### Get-NetLoggedon –ComputerName "servername" (Get actively logged users on a computer) local privs
+Get-NetLoggedon –ComputerName "servername" (Get actively logged users on a computer) local privs
 
-### Get-LoggedonLocal -ComputerName "computername" (Get locally logged users on a computer) needs remote registry on the target
+Get-LoggedonLocal -ComputerName "computername" (Get locally logged users on a computer) needs remote registry on the target
 
 # SHARE
 
-### Invoke-ShareFinder –Verbos (Find shares on hosts in current domain)
+Invoke-ShareFinder –Verbos (Find shares on hosts in current domain)
 
-### Invoke-FileFinder –Verbose (Find sensitive files on computers in the domain)
+Invoke-FileFinder –Verbose (Find sensitive files on computers in the domain)
 
-### Get-NetFileServer (Get all fileservers of the domain)
+Get-NetFileServer (Get all fileservers of the domain)
 
 # GPO
 
