@@ -123,6 +123,14 @@ coming ...
 
 − Shares
 
+− List all the OUs
+
+− List all the computers in the StudentMachines OU.
+
+− List the GPOs
+
+− Enumerate GPO applied on the StudentMachines OU
+
 Check SPN -> kerberoasting -> crack offline hash
 
 AS-REPs Roasting -> ASKTGT for the specific user
