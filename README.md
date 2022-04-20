@@ -44,7 +44,21 @@
 
 # GPO
 
-### Get-NetGPO 
+Get-NetGPO / Get-NetGPO -ComputerName "computername" (Get list of GPO in current domain)
+
+Get-NetGPOGroup (Get GPO(s) which use Restricted Groups or groups.xml for interesting user)
+
+Find-GPOComputerAdmin –Computername "computername" (Get users which are in a local group of a machine using GPO)
+
+Find-GPOLocation -UserName "user" -Verbose (Get machines where the given user is member of a specific group)
+
+# OU
+
+Get-NetOU -FullData (Get OUs in a domain)
+
+Get-NetGPO -GPOname "{AB306569-220D-43FF-B03B-83E8F4EF8081} (Get GPO applied on an OU. Read GPOname from gplink attribute from Get-NetOU)
+
+
 
 
 
