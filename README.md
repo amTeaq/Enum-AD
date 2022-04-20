@@ -58,10 +58,35 @@ Get-NetOU -FullData (Get OUs in a domain)
 
 Get-NetGPO -GPOname "{AB306569-220D-43FF-B03B-83E8F4EF8081} (Get GPO applied on an OU. Read GPOname from gplink attribute from Get-NetOU)
 
+# ACLs
 
+Get-ObjectAcl -SamAccountName "user" –ResolveGUIDs (Get the ACLs associated with the specified object)
 
+Get-ObjectAcl -ADSprefix 'CN=Administrator,CN=Users' -Verbos (Get the ACLs associated with the specified prefix to be used for search)
 
+Invoke-ACLScanner -ResolveGUID (Search for interesting ACEs)
 
+Get-PathAcl -Path "\\dcorp-dc.dollarcorp.moneycorp.local\sysvol (Get the ACLs associated with the specified path)
+
+# TRUST / FOREST
+
+Get-NetDomainTrust / Get-NetDomainTrust –Domain "domain"
+
+Get-NetForest / Get-NetForest –Forest "forestname"
+
+Get-NetForestDomain / Get-NetForestDomain –Forest eurocorp.local (Get all domains in the current forest)
+
+Get-NetForestCatalog / Get-NetForestCatalog –Forest eurocorp.local (Get all global catalogs for the current forest)
+
+Get-NetForestTrust / Get-NetForestTrust –Forest "forestname" (Map trusts of a forest)
+
+# User Hunting
+
+/!\ realmy noisy /!\
+
+Find-LocalAdminAccess –Verbose (Find all machines on the current domain where the current user has local admin access)
+
+-- more info about this command : query the dc to get list of all the computer of the domain (Get-NetComputer) and then query each machine on the domain with "Invoke-CheckLocalAdminAccess" --
 
 
 
