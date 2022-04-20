@@ -100,35 +100,50 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 
 # Priv Esc
 
-PowerUp:
+PowerUp: https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
 
 Invoke-AllChecks
+
+# BloodHound
+
+coming ...
 
 
 --------------------------------------------------------------
 
-### Check SPN -> kerberoasting
+# Check LIST
 
-## Find Delegation
+Check SPN -> kerberoasting -> crack offline hash
+
+AS-REPs Roasting -> ASKTGT for the specific user
+
+Find Delegation : Uncontrained / Constrained
+
+Check DNSAdmin right
+
+Check TGT or TGS in memory of compromise machine
+
+
+# Persistance
+
+DSRM persistance
+
+Custom SSP -> clear text password
+
+AdminSDHolder persistance
+
+Give ACL perm DCSync to a user
+
+Security Descriptors -> modif remote access methods for specific user (wmi)
+
+Skeleton Key (!!!!!!)
+
+
+-----------------------------------------------------------------------------
 
 ### Impacket
 ```python3 findDelegation.py -hashes <:hash> FQDN/user -dc-ip <ip>```
 ### Pywerview 
 ```pywerview get-netuser -u cturpin --hashes 8432ec4c4f9b9ce96b73a6451a1d9dcc -d telecorp.local -t DC-01 --dc-ip 10.10.50.15 --unconstrained```
 
-### Check DNSAdmin right
-
------------------------------------------------
-
-## Persistance
-
-### DSRM persistance
-
-### Custom SSP -> clear text password
-
-### AdminSDHolder
-
-### Give ACL perm DCSync to a user
-
-### Security Descriptors -> modif remote access methods for specific user (wmi)
 
