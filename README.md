@@ -2,7 +2,7 @@
 
 # RECON ENV
 
-## DOMAIN
+# DOMAIN
 
 Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
 
