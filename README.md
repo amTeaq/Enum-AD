@@ -44,6 +44,16 @@ Invoke-FileFinder –Verbose (Find sensitive files on computers in the domain)
 
 Get-NetFileServer (Get all fileservers of the domain)
 
+# OU
+
+Get-NetOU -FullData (Get OUs in a domain)
+
+Get-NetOU "OUFound"
+
+Get-NetOU "OUFound" | %{Get-NetComputer -ADSPath $_} (get computer)
+
+Get-NetGPO -GPOname "{AB306569-220D-43FF-B03B-83E8F4EF8081} (Get GPO applied on an OU. Read GPOname from gplink attribute from Get-NetOU)
+
 # GPO
 
 Get-NetGPO / Get-NetGPO -ComputerName "computername" (Get list of GPO in current domain)
@@ -52,13 +62,9 @@ Get-NetGPOGroup (Get GPO(s) which use Restricted Groups or groups.xml for intere
 
 Find-GPOComputerAdmin –Computername "computername" (Get users which are in a local group of a machine using GPO)
 
+Get-NetGPO -ADSpath 'LDAP://CN={C4F31C31-6258-4991-AAAD-454934E882AE},CN=Policies,CN=System,DC=dollarcorp,DC=moneycorp,DC=local'
+
 Find-GPOLocation -UserName "user" -Verbose (Get machines where the given user is member of a specific group)
-
-# OU
-
-Get-NetOU -FullData (Get OUs in a domain)
-
-Get-NetGPO -GPOname "{AB306569-220D-43FF-B03B-83E8F4EF8081} (Get GPO applied on an OU. Read GPOname from gplink attribute from Get-NetOU)
 
 # ACLs
 
@@ -123,6 +129,8 @@ coming ...
 
 − Shares
 
+-----------------------------------------
+
 − List all the OUs
 
 − List all the computers in the StudentMachines OU. -> Get-NetOU StudentMachines | %{Get-NetComputer -ADSPath $_}
@@ -130,6 +138,14 @@ coming ...
 − List the GPOs
 
 − Enumerate GPO applied on the StudentMachines OU
+
+-----------------------------------------
+
+− ACL for the Users group
+
+− ACL for the Domain Admins group
+
+− All modify rights/permissions for the studentx
 
 Check SPN -> kerberoasting -> crack offline hash
 
