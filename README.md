@@ -68,11 +68,13 @@ Find-GPOLocation -UserName "user" -Verbose (Get machines where the given user is
 
 # ACLs
 
-Get-ObjectAcl -SamAccountName "user" –ResolveGUIDs (Get the ACLs associated with the specified object)
+Get-ObjectAcl -SamAccountName "users" –ResolveGUIDs (Get the ACLs associated with the specified object)
 
 Get-ObjectAcl -ADSprefix 'CN=Administrator,CN=Users' -Verbos (Get the ACLs associated with the specified prefix to be used for search)
 
 Invoke-ACLScanner -ResolveGUID (Search for interesting ACEs)
+
+Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference -match "GroupName"}
 
 Get-PathAcl -Path "\\dcorp-dc.dollarcorp.moneycorp.local\sysvol (Get the ACLs associated with the specified path)
 
@@ -146,6 +148,18 @@ coming ...
 − ACL for the Domain Admins group
 
 − All modify rights/permissions for the studentx
+
+-----------------------------------------
+
+- Enumerate all domains in the moneycorp.local forest.
+
+- Map the trusts of the dollarcorp.moneycorp.local domain.
+
+- Map External trusts in moneycorp.local forest.
+
+- Identify external trusts of dollarcorp domain. Can you enumerate trusts for a trusting forest?
+
+-----------------------------------------
 
 Check SPN -> kerberoasting -> crack offline hash
 
