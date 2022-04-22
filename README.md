@@ -122,6 +122,12 @@ Get-AppLockerPolicy -Effective
 
 Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 
+# Disable Windows Defender
+
+Set-MpPreference -PUAProtection 0
+Set-MpPreference -DisableArchiveScanning  $true
+Set-MpPreference -DisableIntrusionPreventionSystem  $true
+Set-MpPreference -DisableRealtimeMonitoring $true
 
 # BloodHound
 
