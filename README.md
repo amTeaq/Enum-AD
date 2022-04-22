@@ -116,6 +116,13 @@ exploit: Invoke-ServiceAbuse -Name 'AbyssWebServer' -UserName 'dcorp\student202'
 
 Invoke-AllChecks
 
+# APP LOCKER
+
+Get-AppLockerPolicy -Effective
+
+Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+
+
 # BloodHound
 
 coming ...
