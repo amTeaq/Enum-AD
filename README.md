@@ -1,13 +1,11 @@
 # Enum-AD Environnement
 
 Tool used:
-- Powerview
+- Powerview (https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 - Impacket Script
 other ...
 
 # RECON 
-
-with PowerView Module: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
 
 # DOMAIN
 
