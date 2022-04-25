@@ -173,7 +173,7 @@ gwmi -class win32_operatingsystem -ComputerName dcorp-dc.dollarcorp.moneycorp.lo
 
 ### Give access to winrm PS console to a user:
 ```
-Set-RemotePSRemoting -UserName <user> -ComputerName <remotehost> -Verb
+Set-RemotePSRemoting -UserName <user> -ComputerName <remotehost> -Verbose
 ```
 exec:
 ```
