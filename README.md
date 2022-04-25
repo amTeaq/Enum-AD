@@ -3,6 +3,7 @@
 Tool used:
 - Powerview (https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 - Impacket Script
+
 other ...
 
 # RECON 
