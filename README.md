@@ -1,5 +1,10 @@
 # Enum-AD Environnement
 
+Tool used:
+- Powerview
+- Impacket Script
+other ...
+
 # RECON 
 
 with PowerView Module: https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
@@ -258,6 +263,16 @@ Set-DomainObject -Identity <User> -XOR @{useraccountcontrol=4194304} -Verbose
 ### Set SPN to user
 ```
 Set-DomainObject -Identity <User> -Set @{serviceprincipalname='dcorp/<whateverServiceName>'} -Verbose
+```
+  
+# Unconstrained Delegation
+find
+```
+findDelegation.py <domain>/<user>:<pass> -dc-ip <IP>
+```
+or
+```
+Get-NetComputer -Unconstrained
 ```
 --------------------------------------------------------------
 
