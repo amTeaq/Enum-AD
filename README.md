@@ -327,7 +327,7 @@ for example, we could psexec if delegate for cifs:
 psexec.py <domain>/<user-impersonate>@<FQDN-TargetMachine> -k -no-pass -target-ip <ip> -dc-ip <ip>
 ```
   
-## we can request tgs for another service since there is no sname validation:
+#### we can request tgs for another service since there is no sname validation:
   
 ### With kekeo 
   
