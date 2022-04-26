@@ -235,6 +235,10 @@ upload script:
 ```
 Copy-Item -ToSession $appsrv1 -Path C:\AD\Tools\Rubeus.exe -Destination C:\Users\appadmin\Downloads
 ```
+# Download and execute script in memory
+```
+
+```
 # Kerberoasting - ASK TGS
 
 find:
