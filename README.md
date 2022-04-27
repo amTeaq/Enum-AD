@@ -112,6 +112,11 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 
 //Defense -> .\NetCease.ps1 (change permissions on the netsession enum method by removing permission for authenticated users group. 
 
+# SQL Enum
+
+With PowerUpSQL:
+Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose (find accessible sql server with current user)
+
 # Priv Esc
 
 PowerUp: https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
