@@ -115,6 +115,7 @@ Invoke-UserHunter -Stealth (Find computers where a domain admin is logged-in)
 # SQL Enum
 
 With PowerUpSQL:
+
 Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose (find accessible sql server with current user)
 
 Get-SQLServerLinkCrawl -Instance dcorp-mssql.dollarcorp.moneycorp.local -Verbose (Enum server sql to check admin right)
