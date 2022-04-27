@@ -118,7 +118,7 @@ With PowerUpSQL:
 
 Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose (find accessible sql server with current user)
 
-Get-SQLServerLinkCrawl -Instance dcorp-mssql.dollarcorp.moneycorp.local -Verbose (Enum server sql to check admin right)
+Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Verbose (Enum server sql to check admin right)
 
 #### If xp_cmdshell is enabled (or RPC out is true), command execution is possible via this command:
 
