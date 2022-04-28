@@ -100,6 +100,8 @@ Get-NetForestDomain -Verbose | Get-NetDomainTrust (GET ALL TRUST OF A FOREST)
 
 /!\ really noisy /!\
 
+Script: Find-PSRemotingLocalAdminAccess
+
 Find-LocalAdminAccess –Verbose (Find all machines on the current domain where the current user has local admin access)
 
 -- more info about this command : query the dc to get list of all the computer of the domain (Get-NetComputer) and then query each machine on the domain with "Invoke-CheckLocalAdminAccess" --
