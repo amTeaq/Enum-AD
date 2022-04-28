@@ -98,9 +98,9 @@ Get-NetForestDomain -Verbose | Get-NetDomainTrust (GET ALL TRUST OF A FOREST)
 
 # User Hunting
 
-/!\ really noisy /!\
-
 Script: Find-PSRemotingLocalAdminAccess
+
+/!\ really noisy /!\
 
 Find-LocalAdminAccess –Verbose (Find all machines on the current domain where the current user has local admin access)
 
