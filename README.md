@@ -236,7 +236,7 @@ Invoke-Mimikatz -Command '"kerberos::golden /domain:<..> /sid:<..> /target:<FQDN
 
 # Enum Delegation
 
-python3 findDelegation.py dollarcorp.moneycorp.local/student202:t3dBtZYM4dWh5iKM -dc-ip 172.16.2.1
+python3 findDelegation.py <domain>/<user>:<pass> -dc-ip <ip>
 
 # BloodHound
 
