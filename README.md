@@ -242,8 +242,26 @@ python3 findDelegation.py <domain>/<user>:<pass> -dc-ip <ip>
 ```
 # BloodHound
 
-coming ...
-  
+Set up & Run BloodHound:
+
+Install & Run neo4j:
+```
+neo4j.bat install service
+neo4j.bat start
+```
+
+Run BloodHound:
+```
+Import-Module SharpHound.ps1
+Invoke-Bloodhound -CollectionMethod All -Verbose
+
+# ------ Run It Once Again to gather more information about established sessions ------#
+
+Invoke-Bloodhound -CollectionMethod LoggedOn -Verbose
+```
+
+Then you can upload the 2 .zip file on BloodHound 
+
 # Load script through PSSESSION
 ```
 Invoke-Command -FilePath C:\AD\Tools\Invoke-Mimikatz.ps1 -Session $sess
