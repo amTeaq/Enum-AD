@@ -53,9 +53,9 @@ Get-NetFileServer (Get all fileservers of the domain)
 Get-NetOU -FullData (Get OUs in a domain)
 
 Get-NetOU "OUFound"
-
+```
 Get-NetOU OUFound | %{Get-NetComputer -ADSPath $_} (get computer in this OU)
-
+```
 Get-NetGPO -GPOname "{AB306569-220D-43FF-B03B-83E8F4EF8081} (Get GPO applied on an OU. Read GPOname from gplink attribute from Get-NetOU)
 
 # GPO
