@@ -94,7 +94,7 @@ Get-NetForestCatalog / Get-NetForestCatalog –Forest eurocorp.local (Get all gl
 
 Get-NetForestTrust / Get-NetForestTrust –Forest "forestname" (Map trusts of a forest)
 
-Get-NetForestDomain -Verbose | Get-NetDomainTrust (GET ALL TRUST OF A FOREST)
+```Get-NetForestDomain -Verbose | Get-NetDomainTrust``` (GET ALL TRUST OF A FOREST)
 
 # User Hunting
 
