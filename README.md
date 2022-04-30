@@ -537,5 +537,9 @@ GATHERING BASIC INFO:
 
 WHEN COMPROMISE MACHINE -> DUMP SAM BASE
 WHEN COMPROMISE USER    -> FindLocalAdminAccess
+  
+# TGS:
+![image](https://user-images.githubusercontent.com/76106120/166111452-bf1b24dd-7586-447e-afa2-fe81cce4435d.png)
+
 
 
