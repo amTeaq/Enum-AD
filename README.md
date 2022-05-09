@@ -3,11 +3,15 @@
 Tool used:
 - Powerview (https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 - Impacket Script
+- Most of the powershell enum can be done remotly with pywerview -> pywerview get-netuser -u <user> --hashes <hash> ...
 
 other ...
-
+```
+pywerview -> pywerview get-netuser -u <user> --hashes <hash> -d <domain> --dc-ip <ip>
+```
 # RECON 
 
+  
 # DOMAIN
 
 Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
