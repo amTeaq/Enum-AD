@@ -564,19 +564,18 @@ Skeleton Key (!!!!!!)
 CHECK LIST:
 
 GATHERING BASIC INFO:
-- ENUM DOMAIN ADMIN
+- ENUM DOMAIN ADMIN GRP
 - ENUM DOMAIN
 - ENUM USER
 - ENUM GROUP
-- ENUM USER OF DOMAIN ADMINS GROUP
-- ENUM COMPUTER (nmap machine found)
 - ENUM GPO & OU
+- ENUM ACL USERS/GROUPS (to check interesting perms)
+- ENUM COMPUTER (nmap machine found)
 - RUN BLOODHOUND (check shortest path to domain admins)
 - ENUM TRUST
 - ENUM SHARE
 
-WHEN COMPROMISE MACHINE -> DUMP SAM BASE
-WHEN COMPROMISE USER    -> FindLocalAdminAccess
+WHEN COMPROMISE MACHINE -> DUMP SAM BASE -> FindLocalAdminAccess
 
 -------------------------------------------------------------------------------------------------
 
