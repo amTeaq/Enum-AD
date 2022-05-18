@@ -457,6 +457,8 @@ DonPAPI.py --hashes :<NT> domain/user@target
 ```
 
 # DCSHADOW
+  
+  useless :)
 --------------------------------------------------------------
 
 # Check LIST
