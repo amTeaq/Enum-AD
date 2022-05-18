@@ -578,6 +578,7 @@ GATHERING BASIC INFO:
 - ENUM SHARE
 
 FIND SERVER WHERE COMPROMISED USER AS ACCESS AND WHERE DOMAIN ADMIN IS LOGGED IN.
+
 WHEN COMPROMISE MACHINE -> DUMP SAM BASE -> FindLocalAdminAccess
 
 -------------------------------------------------------------------------------------------------
