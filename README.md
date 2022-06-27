@@ -588,5 +588,13 @@ GATHERING BASIC INFO:
 
 great ressource: https://book.hacktricks.xyz/windows/active-directory-methodology/silver-ticket
 
+-------------------------------------------------------------------------------------------------
+
+## SHADOW CREDENTIALS
+
+Possibilité de se connecter avec un clé privité/publique sur l'AD.
+Si un user peut modifier l'attribut msDS-KeyCrendentialsLink d'autre user,
+il peut modifier cet attribut et donc se logger sous ce compte avec la clé privé sans aucun mdp.
+
 
 
