@@ -599,8 +599,15 @@ il peut modifier cet attribut et donc se logger sous ce compte avec la clé priv
 ## Get DOMAIN SID
 
 rcp: 
+  
+domain sid:
 
 ![image](https://user-images.githubusercontent.com/76106120/176701035-9f6f5df4-1ab5-4623-83af-34397c265bd1.png)
+  
+user enum sid:
+  
+  ![image](https://user-images.githubusercontent.com/76106120/176701401-d459ec68-5ebe-4e0f-bc38-c912b9d645c4.png)
+
 
 
 
