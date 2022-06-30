@@ -596,5 +596,12 @@ Possibilité de se connecter avec un clé privité/publique sur l'AD.
 Si un user peut modifier l'attribut msDS-KeyCrendentialsLink d'autre user,
 il peut modifier cet attribut et donc se logger sous ce compte avec la clé privé sans aucun mdp.
 
+## Get DOMAIN SID
+
+rcp: 
+
+![image](https://user-images.githubusercontent.com/76106120/176701035-9f6f5df4-1ab5-4623-83af-34397c265bd1.png)
+
+
 
 
