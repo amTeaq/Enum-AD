@@ -20,6 +20,8 @@ Trust :
 ```
 pywerview get-netdomaintrust -u <user> -p '<pwd>' -t <dc-ip>
 ```
+  
+## Powerview
 
 Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
 
