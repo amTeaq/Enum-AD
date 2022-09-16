@@ -618,6 +618,26 @@ user enum sid:
   ![image](https://user-images.githubusercontent.com/76106120/176701401-d459ec68-5ebe-4e0f-bc38-c912b9d645c4.png)
 
 
+  ------------------------------------------------------------------------------------------------
+  
+  ## NET COMMAND
+  
+  List Domain Admins :
+  
+  ```
+  C:\>net group "Domain Admins"
+  ```
+  
+  Add new USER to the Domain
+  
+  ```
+  C:\>net user Teaq azerty123 /ADD
+  ```
+  
+  ADD user to Domain Admins GROUP
+  
+  ```
+  C:\>net group "Domain Admins" Teaq /ADD /DOMAIN
+  ```
 
-
-
+  
