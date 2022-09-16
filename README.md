@@ -620,7 +620,7 @@ user enum sid:
 
   ------------------------------------------------------------------------------------------------
   
-  ## NET COMMAND
+  ## NET COMMAND (ONLY ON Windows Domain Controller)
   
   List Domain Admins :
   
