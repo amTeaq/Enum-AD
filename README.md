@@ -14,6 +14,13 @@ pywerview -> pywerview get-netuser -u <user> --hashes <hash> -d <domain> --dc-ip
   
 # DOMAIN
 
+## Pywerview
+
+Trust :
+```
+pywerview get-netdomaintrust -u <user> -p '<pwd>' -t <dc-ip>
+```
+
 Get-NetDomain / Get-NetDomain -Domain "otherdomain" (enum domain)
 
 Get-DomainSID
