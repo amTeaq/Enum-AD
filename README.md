@@ -639,5 +639,10 @@ user enum sid:
   ```
   C:\>net group "Domain Admins" Teaq /ADD /DOMAIN
   ```
+  
+  ## Manual ENUM Windows
+  
+  ![image](https://user-images.githubusercontent.com/76106120/190850950-56174f35-eddb-4d80-b20a-9b873d7524a5.png)
+
 
   
