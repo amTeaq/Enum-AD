@@ -648,5 +648,20 @@ user enum sid:
   dir c:\*.txt /w/o/s/p
   ```
 
+--------------------------------------------------------------------------------------------------------
+  
+## ADCS
+  
+Find ADCS instance (need creds) :
+  
+```
+certipy find -u <user> -hashes <:hashNT> -dc-ip <IP>
+```
+then cat the vulnerable certificates :
+
+```
+cat xxxxxxx_Certipy.txt | grep Vulnerabilities -A 1 -B 32
+```
+  
 
   
