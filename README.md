@@ -677,4 +677,10 @@ python3 PetitPotam.py -u <user> -hashes <:hashNT> -d <domain> -dc-ip <ip> <ipLIS
 
 to use certificate base 64 on linux, take a look here : https://gist.github.com/Flangvik/15c3007dcd57b742d4ee99502440b250
 or use rubeus :(
+
+## Enum SID Domain
+
+```
+nltest /trusted_domains /v
+```
   
