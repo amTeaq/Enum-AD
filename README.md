@@ -683,4 +683,8 @@ or use rubeus :(
 ```
 nltest /trusted_domains /v
 ```
-  
+ 
+## SMBCLIENT
+```
+smbclient //10.0.0.30/Finance -U user --pw-nt-hash BD1C6503987F8FF006296118F359FA79 -W domain.local
+```
